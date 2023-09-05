@@ -11,7 +11,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 app.set('port', process.env.PORT || 4000);
 
-
+app.get('api/v1/test', (req,res) => {
+    res.send('Hello ADSO!!')
+})
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
